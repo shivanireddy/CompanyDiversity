@@ -1,0 +1,33 @@
+{
+  "name": "Know Your Company Chrome Extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Extension to give you information about a company's employee diversity and recent events in media. This extension was created with the awesome extensionizr.com",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "19": "icons/icon19.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Know Your Company",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "notifications",
+    "https://*/*",
+    "tabs"
+  ],
+  "web_accessible_resources": [
+      "data/employeediversity.json"
+  ]
+}
